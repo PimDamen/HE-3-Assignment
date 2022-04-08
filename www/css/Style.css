@@ -1,0 +1,286 @@
+
+@import url(video-js.css);
+@import url(css-reset.css);
+
+/* =======================
+index
+1. fonts
+2. general layout 
+3. selector section
+4. video section
+======================== */
+
+/* ========================
+1. fonts
+========================= */
+
+@font-face {
+    font-family: 'alice';
+    src: url('../alice-fonts/alice_in_wonderland_3-webfont.eot');
+    src: url('../alice-fonts/alice_in_wonderland_3-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../alice-fonts/alice_in_wonderland_3-webfont.woff2') format('woff2'),
+         url('../alice-fonts/alice_in_wonderland_3-webfont.woff') format('woff'),
+         url('../alice-fonts/alice_in_wonderland_3-webfont.svg#alice_in_wonderlandregular') format('svg');
+    font-weight: normal;
+    font-style: normal;}
+p,h1,h2{
+    font-family: 'alice';    
+    margin:0;
+}
+
+/* ========================
+2. general layout
+========================= */
+
+.layout{
+    position: relative;    
+    width: 1200px;
+    height: 675px;
+    margin-left:auto;
+    margin-right: auto;
+    background-image: url("../images/alice-through-the-looking-glass-poster-background.jpg");
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-size: contain;  
+   
+}
+.headerText h2{    
+    margin-top: 40px;
+    font-size: .7em; 
+}
+.headerText{
+    position: absolute;
+    height:auto;
+    width: 70%;
+    left:110px;
+    top:60px;
+    color: rgb(49, 51, 18);  
+    font-size:3.5em;
+    padding:0;
+    text-align: center;    
+	text-shadow: 1px 4px 4px rgba(255, 255, 255, 5);    
+}
+
+
+/* ========================
+3. selector section
+========================= */
+.selections{
+    position:relative;
+    top:63%;
+    width:100%;
+    height: 251px;
+    
+}
+a a:hover, a:focus, a:active, a:visited{
+    text-decoration: none;
+    color: black;
+}
+.selections div{
+    position:absolute;
+    background-image: url("../images/alice-magic-ball.png");
+    background-size: contain;
+    display: block;
+    width: 145px;
+    height:147px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 2px orange transparent 1.5;
+    font-size: 2rem;
+    
+    
+}
+.selections p{
+    position: absolute;
+    text-align: center;
+    top:40%;
+    left:27%;
+}
+a .smallVideo{
+    left: 40%;
+}
+.mediumVideo{
+    left:25%;
+    top:15%
+}
+.largeVideo{
+    left:7.5%;
+    top:23%;
+
+}
+
+
+/* ========================
+4. video section
+========================= */
+
+/* === Window to indicate that this is where the video plays ==== */
+.trailerPlayer{
+    position: absolute;
+    background-image:url("../images/roseborder.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+    height: 60%;
+    width: 60%;
+    left:5px;
+    top:5px;
+    border-radius: 10% 10% 10% 10%;
+    border: solid rgb(233, 230, 72);
+    overflow: hidden;
+
+}
+/* ===== Actual video ==== */
+.video{
+    position: absolute;    
+    height: 100%;
+    width: 100%;
+}
+/* === Welcome message for homepage requesting to select resolution=== */
+
+
+
+
+
+
+
+
+
+
+/* 
+================
+working version below but needs tinkering
+================ */
+/* .layout{
+    position:relative;
+    width: 1200px;
+    height: 700px;
+    margin-left:auto;
+    margin-right: auto;
+}
+.background {
+    position:relative;
+    width: 1200px;
+    height: 675px;
+    margin-left:auto;
+    margin-right: auto;    
+}
+/* ==================
+speler, header en decoratie
+van het afspeelvenster
+================== */
+/* .trailerplayer{
+    position: absolute;
+    height: 60%;
+    width: 60%;
+    left:5px;
+    top:5px;
+    border-radius: 150px;
+    border: solid rgb(233, 230, 72);
+    overflow: hidden;
+            
+}
+.video{
+    position: relative;   
+    border-radius:150px;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+
+}
+
+.headerText{
+    position: absolute;
+    height: 90%;
+    width: 70%;
+    left:110px;
+    top:60px;
+    color: rgb(159, 165, 70);  
+    font-size:1.9em;
+    padding:0;
+    text-align: center;    
+	text-shadow: 1px 4px 4px rgba(255, 255, 255, 5);    
+}
+.headerText h2 em{
+    font-size:0.8em;
+    color: rgb(76, 78, 50); 
+}
+.borderimage{
+    width: 100%;
+    height:100%;
+     
+} */
+/* =============================
+images links as used buttons
+
+buttons specifiek met id benoemd
+voor mogelijk latere script 
+implementaties.
+============================= */
+/*.video-reel{
+    position: absolute;
+    left:0px;       
+    top:0px;   
+}
+#alice-trailer-small-buttonimage{
+    position: absolute;
+    background-image: url('../images/attlg-magicball-360p.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 170px;
+    height:170px;
+    left: 490px;
+    top:400px;
+     border-radius: 50%;
+    
+}
+#alice-trailer-medium-buttonimage{
+    position: absolute;
+    background-image: url('../images/attlg-magicball-480p.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height:200px;
+    left:320px;
+    top:450px;
+    border-radius: 50%;
+    border:0.5px solid;
+  
+}
+#alice-trailer-high-buttonimage{
+    position: absolute;
+    background-image: url('../images/attlg-magicball-720p.png');
+    background-size: contain;  
+    background-repeat: no-repeat;
+    width: 200px;
+    height:200px;
+    left:120px;
+    top:470px;
+    border-radius: 50%;
+    content: attr("video-format");
+    font-family: 'Alice';
+    font-size: 50px;
+
+   
+    
+}
+.video-format-selector{
+    content:attr(data-title);
+    font-size: 20px;  
+    
+}
+.video-format-selector a:hover {
+    position: absolute;
+    display:block;
+    width: 0.2em;
+    padding: 0.2em;
+    color: black;
+    font-size: 0.7em;
+    border-radius: 50%;
+    content: attr("data-title");
+    font-family: 'Alice';
+    font-size: 50px;
+    content: attr(data-title);
+}
+ */

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Alice, 480P trailer</title>
+    <link rel="stylesheet"
+          href="../css/Style.css">
+</head>
+
+<body>
+    <div class="layout">
+        <!-- ==section where player and welcome message go== -->
+        <div class="trailerPlayer">          
+
+                <video class="video-js video"
+                id="my-video" poster="../images/alice-title.png" preload="metadata"  controls data-setup="{}">
+                    <source src="../video/Alice Through The Looking Glass 480p.mp4"
+                            type="video/mp4">
+                    <source src="../video/Alice Through The Looking Glass 480p.webm"
+                            type="video/webm">
+                    <p>Your browser does not support this video, please consider using <a
+                           href="https://brave.com/">Brave Browser</a></p>
+                </video>
+                <script src="../js/video.js"></script>
+            
+        </div>
+        <!-- == selectors for the pages with different resolutions== -->
+        <div class="selections">
+            <a href="../videopages/attlg-trailer-small.html">
+                <div class="smallVideo">
+                    <p>Small</p>
+                </div>
+            </a>
+            <a href="../videopages/attlg-trailer-medium.html">
+                <div class="mediumVideo">
+                    <p>Medium</p>
+                </div>
+            </a>
+            <a href="../videopages/attlg-trailer-high.html">
+                <div class="largeVideo">
+                    <p>Large</p>
+                </div>
+            </a>                   
+                
+        </div>            
+
+    </div>       
+    
+</body>
+
+</html>
